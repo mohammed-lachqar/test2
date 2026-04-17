@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnet d'adresses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#">Carenet d'adresses</a>
+        <!-- bare de search -->
+        <div class="searchZone" id="searchZone">
+            <input type="text" id="search" placeholder="Rechercher...">
+            <button onclick="search()"><i class="fas fa-search"></i></button>
+        </div>
+        <!-- Profile -->
+        <span class="profile" id="profile"><i class="fa-solid fa-circle-user"></i></span>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <section class="SideMenu" id="SideMenu">
+             <div class="iconsMenu">
+                <button id="closeSideBar"><i class="fas fa-close"></i></button>
+            </div>
+            <h2>Menu</h2>
+            <ul class="modeficationMenu">
+                <li><a href="#" id="creatContact">Créer un contact</a></li>
+                <li><a href="#" id="Modofier">Modifier un contact</a></li>
+                <li><a href="#">Supprimer un contact</a></li>
+            </ul>
+            <ul class="categorie">
+                <li class="active"><i class="fa-solid fa-people-group active"></i>  Tous</li>
+                <li><i class="fa-solid fa-star"></i> préférés</li>
+                <li><i class="fa-solid fa-house-chimney-user"></i> famille</li>
+                <li><i class="fa-solid fa-briefcase"></i> travail</li>
+                <li><i class="fa-solid fa-user-friends"></i> amis</li>
+            </ul>
+        </section>
+
+
+        <!-- afichage des donnes -->
+        <section class="affichage" id="affichage">
+            <div class="iconsMenu">
+                <button class="addUser"><i class="fas fa-user-plus"></i></button>
+                <button onclick="openSideBar()" class="menubar" id="menuBar"><i class="fas fa-bars"></i></button>
+            </div>
+            <div class="contactDetails">
+                <h2 id="contactName">John Doe</h2>
+                <span class="icon" id="icon">JD</span>
+                <p class="label">Nom complete:</p>
+                <p><span id="prenom">John</span> <span id="nom">Doe</span></p>
+                <p class="label">Nombre de téléphone:</p>
+                <p id="number">+212 1 23 45 67 89</p>
+                <p class="label">Email:</p>
+                <p id="userEmail">john.doe@example.com</p>
+                <p class="label">Descriptiom:</p>
+                <p id="description">amis de college</p>
+                <p class="label">company:</p>
+                <p id="company">Microsoft</p>
+                <p class="label">Catégorie:</p>
+                <p id="categorie">Amis</p>
+            </div>
+            <div class="btns">
+                <button type="reset" class="btn btn-secondary btn">Supprimer</button>
+                <button type="submit" class="btn btn-primary btn" id="modifyContact">Modifier</button>
+            </div>
+        </section>
+
+        <section id="contactSection" class="contactSection">
+            <h2>tous les contacts</h2>
+            <!-- <div class="iconsMenu">
+                <span class="addUser"><i class="fas fa-user-plus"></i></span>
+                <span class="menubar" id="menubar"><i class="fas fa-bars"></i></span>
+            </div> -->
+            <!-- Contacts Container -->
+            <div id="contacts-container" class="contacts-container">
+                <span class="first_lettre" id="f-littre">j</span>
+                <div class="contact">
+                    <div class="name-icon">
+                        <span class="icon" id="icon">JD</span>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div>
+
+                        <p class="number" id="number"><i class="fas fa-phone"></i> 123-456-7890</p>
+                        <p class="userEmail" id="userEmail"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="name-icon">
+                        <span class="icon" id="icon">JD</span>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div>
+
+                        <p class="number" id="number"><i class="fas fa-phone"></i> 123-456-7890</p>
+                        <p class="userEmail" id="userEmail"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="name-icon">
+                        <span class="icon" id="icon">JD</span>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div>
+
+                        <p class="number" id="number"><i class="fas fa-phone"></i> 123-456-7890</p>
+                        <p class="userEmail" id="userEmail"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="name-icon">
+                        <span class="icon" id="icon">JD</span>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div>
+
+                        <p class="number" id="number"><i class="fas fa-phone"></i> 123-456-7890</p>
+                        <p class="userEmail" id="userEmail"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="name-icon">
+                        <span class="icon" id="icon">JD</span>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div>
+
+                        <p class="number" id="number"><i class="fas fa-phone"></i> 123-456-7890</p>
+                        <p class="userEmail" id="userEmail"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="name-icon">
+                        <span class="icon" id="icon">JD</span>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div>
+
+                        <p class="number" id="number"><i class="fas fa-phone"></i> 123-456-7890</p>
+                        <p class="userEmail" id="userEmail"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="name-icon">
+                        <span class="icon" id="icon">JD</span>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div>
+
+                        <p class="number" id="number"><i class="fas fa-phone"></i> 123-456-7890</p>
+                        <p class="userEmail" id="userEmail"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="name-icon">
+                        <span class="icon" id="icon">JD</span>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div>
+
+                        <p class="number" id="number"><i class="fas fa-phone"></i> 123-456-7890</p>
+                        <p class="userEmail" id="userEmail"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="name-icon">
+                        <span class="icon" id="icon">JD</span>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div>
+
+                        <p class="number" id="number"><i class="fas fa-phone"></i> 123-456-7890</p>
+                        <p class="userEmail" id="userEmail"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="name-icon">
+                        <span class="icon" id="icon">JD</span>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div>
+
+                        <p class="number" id="number"><i class="fas fa-phone"></i> 123-456-7890</p>
+                        <p class="userEmail" id="userEmail"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="name-icon">
+                        <span class="icon" id="icon">JD</span>
+                        <h3>John Doe</h3>
+                    </div>
+                    <div>
+
+                        <p class="number" id="number"><i class="fas fa-phone"></i> 123-456-7890</p>
+                        <p class="userEmail" id="userEmail"><i class="fas fa-envelope"></i> john.doe@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Form for adding/editing contacts  display or hide by using javascript  -->         
+        <!-- vous pouvez modifier le code sauffe les classes ou suprimer le commontire pour voir la formule-->
+       
+        <!--  card d'joutr/modifier -->
+        <div class="cards" id="cards">
+            <div class="cardInfo" id="editInfo">
+                <div class="closeContainer"><i class="fas fa-close close"></i> </div>
+                <h2>Modifier les informations du contact</h2>
+                <form id="contact-form" class="infoForm">
+                    <div class="required" id="required">
+                    
+                        <label for="lastName">Nom:</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Entrez le nom *" required>
+                        <label for="firstName">Prénom:</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Entrez le prénom *" required>
+                        <label for="Number">Numéro de téléphone:</label>
+                        <input type="text" id="Number" name="Number" placeholder="+212 1 23 45 67 89 *" required>
+                        <label for="Email">Email:</label>
+                        <input type="email" id="Email" name="Email" placeholder="exemples@domaine.com *" required>
+                    </div>
+                    <div class="optionnelle">
+                        <label for="company">Company:</label>
+                        <input type="text" id="company" name="company" placeholder="Entrez la entreprise">
+                        <label for="description">Description:</label>
+                        <textarea name="description" id="description" placeholder="Entrez la description"></textarea>
+                    </div>
+                    <label for="categorie">Catégorie:</label>
+                    <select id="categorie" name="categorie">
+                        <option value="none"></option>
+                        <option value="amis">Amis</option>
+                        <option value="prefer">Préféré</option>
+                        <option value="famille">Famille</option>
+                        <option value="travail">Travail</option>
+                    </select>
+                    <div class="btns">
+                        <button type="reset" class="btn btn-secondary">Annuler</button>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 Carnet d'adresses. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
